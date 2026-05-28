@@ -1,0 +1,287 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins';
+    text-decoration:none;
+    list-style:none;
+    scroll-behavior:smooth;
+}
+body{
+    overflow-x: hidden;
+    background:linear-gradient(to right,#ff9a9e,#fad0c4);
+}
+
+header{
+    position:fixed;
+    top:1rem;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:5rem;
+    background:black;
+    color:white;
+    padding:1rem 2rem;
+    border-radius:3rem;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:1.3rem;
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    gap:2rem;
+}
+
+.nav-links li a{
+    color:white;
+    position:relative;
+}
+
+.nav-links li a::before{
+    content:'';
+    position:absolute;
+    width:0;
+    height:3px;
+    background:cyan;
+    bottom:-5px;
+    left:0;
+    transition:0.3s;
+}
+
+.nav-links li a:hover::before{
+    width:100%;
+}
+
+.visit-btn{
+    padding:0.8rem 1.5rem;
+    border:none;
+    border-radius:2rem;
+    cursor:pointer;
+    background:linear-gradient(to right,#009dff,#ff00ff);
+    color:white;
+}
+
+#menu-icon{
+    display:block;
+    font-size:2rem;
+    cursor:pointer;
+    color:white;
+}
+
+section{
+    min-height:100vh;
+    padding:8rem 12%;
+}
+
+.about{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.about-container{
+    display:flex;
+    align-items:center;
+    gap:5rem;
+}
+
+.about img{
+    width:300px;
+    border-radius:50%;
+}
+
+.info-box{
+    text-align:center;
+}
+
+.info-box h1{
+    font-size:4rem;
+}
+
+.info-box span{
+    color:#009dff;
+    font-size:2rem;
+}
+
+.btn-group{
+    display:flex;
+    gap:1rem;
+    margin-top:2rem;
+}
+
+.btn{
+    border:2px solid black;
+    padding:0.8rem 1.5rem;
+    border-radius:2rem;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:black;
+    color:white;
+}
+
+.socials{
+    margin-top:2rem;
+}
+
+.socials i{
+    font-size:2rem;
+    margin:0 1rem;
+    cursor:pointer;
+}
+
+.section-title{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:3rem;
+}
+
+.experience-info{
+    display:flex;
+    gap:5rem;
+    align-items:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat  1fr;
+    gap:2rem;
+}
+
+.grid-card{
+    border:2px solid black;
+    padding:2rem;
+    border-radius:2rem;
+    transition:0.3s;
+}
+
+.grid-card:hover{
+    background:black;
+    color:white;
+}
+
+.experience img{
+    width:300px;
+    border-radius:2rem;
+}
+
+.projects-grid{
+    display:flex;
+    justify-content:center;
+}
+
+.project-card{
+    width:400px;
+    border:2px solid black;
+    border-radius:2rem;
+    padding:2rem;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    background:black;
+    color:white;
+}
+
+.input-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2rem;
+}
+
+.input{
+    position:relative;
+}
+
+.input input{
+    padding:1rem 4rem;
+    border-radius:2rem;
+    border:2px solid black;
+}
+
+.input i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+footer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+    padding:2rem;
+}
+
+footer ul{
+    display:flex;
+    gap:2rem;
+}
+
+footer ul li a{
+    color:black;
+    font-size:1rem;
+    font-weight:600;
+}
+
+footer ul li a:hover{
+    color:blue;
+    text-decoration:underline;
+}
+
+@media(max-width:768px){
+    header{
+        width:90%;
+        justify-content: space-between;
+        gap:1rem;
+        padding:1rem;
+    }
+
+    #menu-icon{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:100%;
+        right:0;
+        width:200px;
+        background:black;
+        border-radius:1rem;
+        padding:1rem;
+        display:none;
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .visit-btn{
+        display:none;
+    }
+
+    .about-container{
+        flex-direction:column;
+        text-align: center;
+    }
+
+    .experience-info{
+        flex-direction:column;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
